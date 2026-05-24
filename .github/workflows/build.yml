@@ -2,7 +2,7 @@ name: Build snapshot
 
 on:
   push:
-    branches: ["26.1", "26.1.1", "26.1.2"]
+    branches: ["26.1.2"]
   workflow_dispatch:
 
 jobs:
@@ -30,12 +30,12 @@ jobs:
       - name: Upload Fabric artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TierTagger-fabric-26.1
-          path: fabric/build/libs/tiertagger-*+mc26.1.jar
+          name: TierTagger-fabric-26.1.2
+          path: fabric/build/libs/tiertagger-*+mc26.1.2.jar
 
       - name: Upload NeoForge artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TierTagger-neoforge-26.1
-          path: neoforge/build/libs/tiertagger-*+mc26.1.jar
+          name: TierTagger-neoforge-26.1.2
+          path: neoforge/build/libs/tiertagger-*+mc26.1.2.jar
 
