@@ -27,15 +27,20 @@ jobs:
       - name: Build
         run: ./gradlew build
 
+      - name: List built jars
+        run: find . -path '*/build/libs/*.jar' ! -name '*-dev.jar' ! -name '*-sources.jar' ! -name '*-all.jar' | sort
+
       - name: Upload Fabric artifact
         uses: actions/upload-artifact@v4
         with:
           name: TierTagger-fabric-26.1.2
-          path: fabric/build/libs/tiertagger-*+mc26.1.2.jar
+          path: fabric/build/libs/tiertagger-*.jar
+          if-no-files-found: warn
 
       - name: Upload NeoForge artifact
         uses: actions/upload-artifact@v4
         with:
           name: TierTagger-neoforge-26.1.2
-          path: neoforge/build/libs/tiertagger-*+mc26.1.2.jar
+          path: neoforge/build/libs/tiertagger-*.jar
+          if-no-files-found: warn
 
