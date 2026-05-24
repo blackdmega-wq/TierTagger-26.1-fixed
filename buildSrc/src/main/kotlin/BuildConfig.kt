@@ -1,5 +1,5 @@
 object BuildConfig {
-    const val MINECRAFT_VERSION: String = "26.1"
+    const val MINECRAFT_VERSION: String = "26.1.2"
     const val FABRIC_LOADER_VERSION: String = "0.19.2"
     const val NEOFORGE_VERSION: String = "26.1.0.1-beta"
     const val FABRIC_API_VERSION: String = "0.145.1+26.1"
